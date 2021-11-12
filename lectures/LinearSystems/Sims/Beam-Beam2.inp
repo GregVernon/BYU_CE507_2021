@@ -1,0 +1,38 @@
+** PART INSTANCE: Part-1-1
+** 
+*Node
+      1,           0.,           0.,           0.
+      2,  0.100000001,           0.,           0.
+      3,  0.200000003,           0.,           0.
+      4,  0.300000012,           0.,           0.
+      5,  0.400000006,           0.,           0.
+      6,          0.5,           0.,           0.
+      7,  0.600000024,           0.,           0.
+      8,  0.699999988,           0.,           0.
+      9,  0.800000012,           0.,           0.
+     10,  0.899999976,           0.,           0.
+     11,           1.,           0.,           0.
+*Element, type=B31
+ 1,  1,  2
+ 2,  2,  3
+ 3,  3,  4
+ 4,  4,  5
+ 5,  5,  6
+ 6,  6,  7
+ 7,  7,  8
+ 8,  8,  9
+ 9,  9, 10
+10, 10, 11
+*Nset, nset=Part-1-1_WholePart, generate
+  1,  11,   1
+*Elset, elset=Part-1-1_WholePart, generate
+  1,  10,   1
+** Section: Section-1  Profile: Profile-1
+*Beam Section, elset=Part-1-1_WholePart, material=Dummy, poisson = 0.25, temperature=GRADIENTS, section=RECT
+0.2, 0.2
+0.,0.,-1.
+*System
+*Nset, nset=XMax
+ 11,
+*Nset, nset=XMin
+ 1,
